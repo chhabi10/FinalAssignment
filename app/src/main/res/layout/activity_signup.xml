@@ -60,17 +60,19 @@
             android:background="@android:color/darker_gray"
             android:inputType="number"
             android:textSize="30sp"
-            android:layout_margin="5dp"/>
+            android:layout_marginTop="15dp" />
+    <EditText
+        android:id="@+id/etaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/darker_gray"
+        android:textSize="30sp"
+        android:textColor="@color/black"/>
 
-        <EditText
-            android:id="@+id/etaddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Address"
-            android:textSize="30sp"
-            android:background="@android:color/darker_gray"
-            android:textColor="@color/black"
-            android:layout_margin="5dp"/>
+
+
 
         <Button
             android:id="@+id/btnsign"
