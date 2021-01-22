@@ -24,7 +24,7 @@
             android:background="@android:color/darker_gray"
             android:hint="Full Name"
             android:inputType="textPersonName"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:textColor="@color/black"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="10dp"/>
@@ -35,7 +35,7 @@
             android:hint="Last name"
             android:inputType="textPersonName"
             android:background="@android:color/darker_gray"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:textColor="@color/black"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="10dp"/>
@@ -46,7 +46,7 @@
             android:hint="Username"
             android:inputType="textPersonName"
             android:background="@android:color/darker_gray"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:textColor="@color/black"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="10dp"/>
@@ -59,7 +59,7 @@
             android:hint="Age"
             android:background="@android:color/darker_gray"
             android:inputType="number"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:layout_marginTop="15dp" />
     <EditText
         android:id="@+id/etaddress"
@@ -68,7 +68,7 @@
         android:hint="Address"
         android:layout_marginTop="20dp"
         android:background="@android:color/darker_gray"
-        android:textSize="30sp"
+        android:textSize="40sp"
         android:textColor="@color/black"/>
 
 
@@ -81,7 +81,6 @@
             android:layout_marginRight="80dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:text="Sigup"
             android:layout_marginTop="40dp"
             android:backgroundTint="#088A68" />
