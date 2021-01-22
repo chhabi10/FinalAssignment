@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
 
 
 
@@ -17,16 +17,11 @@ private lateinit var imgv:ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        imgv=findViewById(R.id.imgv)
-        btnenter= findViewById(R.id.btnenter)
 
-        btnenter.setOnClickListener(this)
 
 
 
     }
 
-    override fun onClick(v: View?) {
-        TODO("Not yet implemented")
-    }
+
 }

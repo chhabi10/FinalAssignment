@@ -1,17 +1,23 @@
 package com.chhabi.finalassignment
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
+import com.google.android.material.textfield.TextInputEditText
 
-class LoginActivity : AppCompatActivity(), View.OnClickListener{
+
+class LoginActivity : AppCompatActivity(){
     private lateinit var tvappname: TextView
-    private lateinit var etusername: EditText
-    private lateinit var etpassword: EditText
+    private lateinit var etusername: TextInputEditText
+    private lateinit var etpassword: TextInputEditText
     private lateinit var btnlogin: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -22,12 +28,32 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener{
         btnlogin= findViewById(R.id.btnlogin)
 
 
-        btnlogin.setOnClickListener(this)
+       btnlogin.setOnClickListener {
+
+
+           if (etusername.text.toString() == "softwarica" && etpassword.text.toString() == "coventry") {
+               val intent = Intent(this, MainActivity::class.java)
+               startActivity(intent)
+           } else {
+               Toast.makeText(this, "Either username or password is incorrect", Toast.LENGTH_SHORT).show()
+               etusername.error = "Username or password is incorrect"
+               etusername.requestFocus()
+           }
+       }
 
         }
 
-    override fun onClick(v: View?) {
-        TODO("Not yet implemented")
+    private fun validate(): Boolean {
+        var flag = true
+        when {
+            TextUtils.isEmpty(etusername.text) -> {
+                etusername.error = "Username or password is incorrect"
+                etusername.requestFocus()
+                flag = false
+            }
+        }
+        return flag
     }
+
 
 }
