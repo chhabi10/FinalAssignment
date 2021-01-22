@@ -90,6 +90,7 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:textStyle="italic"
+        android:backgroundTint="#0B2161"
         android:textSize="30sp"
         android:layout_marginTop="20sp"
         app:layout_constraintEnd_toEndOf="parent"

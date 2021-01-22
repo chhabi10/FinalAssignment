@@ -1,11 +1,10 @@
 package com.chhabi.finalassignment
 
+import android.content.Intent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
-
-
 
 
 class SignupActivity : AppCompatActivity(), View.OnClickListener {
@@ -34,6 +33,21 @@ class SignupActivity : AppCompatActivity(), View.OnClickListener {
         }
 
     override fun onClick(v: View?) {
+        when (v?.id)
+        {
+            R.id.btnenter->
+            {
+
+                etfname.text.clear()
+                etlname.text.clear()
+                etusername.text.clear()
+                etaddress.text.clear()
+                etpassword.text.clear()
+                val intent= Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                Toast.makeText(this, "Student Added Successfully!", Toast.LENGTH_SHORT).show()
+            }
+        }
 
             }
     }

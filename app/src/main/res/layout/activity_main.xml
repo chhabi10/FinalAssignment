@@ -17,7 +17,9 @@
         android:id="@+id/btnenter"
         android:text="Enter here to proceed"
         android:layout_marginTop="20dp"
+        android:textSize="20sp"
         android:layout_gravity="center"
+        android:backgroundTint="#008080"
         android:layout_width="331dp"
         android:layout_height="78dp" />
 

@@ -31,11 +31,11 @@ class LoginActivity : AppCompatActivity(){
        btnlogin.setOnClickListener {
 
 
-           if (etusername.text.toString() == "softwarica" && etpassword.text.toString() == "coventry") {
+           if (etusername.text.toString() == "chhabi" && etpassword.text.toString() == "chhabi123") {
                val intent = Intent(this, MainActivity::class.java)
                startActivity(intent)
            } else {
-               Toast.makeText(this, "Either username or password is incorrect", Toast.LENGTH_SHORT).show()
+               Toast.makeText(this, " username or password is incorrect", Toast.LENGTH_SHORT).show()
                etusername.error = "Username or password is incorrect"
                etusername.requestFocus()
            }
