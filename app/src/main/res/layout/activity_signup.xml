@@ -25,6 +25,7 @@
             android:hint="Full Name"
             android:inputType="textPersonName"
             android:textSize="40sp"
+            android:backgroundTint="#088A68"
             android:textColor="@color/black"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="10dp"/>
@@ -38,6 +39,7 @@
             android:background="@android:color/darker_gray"
             android:textSize="40sp"
             android:textColor="@color/black"
+            android:backgroundTint="#088A68"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="10dp"/>
         <EditText
@@ -48,6 +50,7 @@
             android:inputType="textPersonName"
             android:background="@android:color/darker_gray"
             android:textSize="40sp"
+            android:backgroundTint="#088A68"
             android:textColor="@color/black"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="10dp"/>
@@ -60,6 +63,7 @@
             android:hint="Age"
             android:background="@android:color/darker_gray"
             android:inputType="number"
+            android:backgroundTint="#088A68"
             android:textSize="40sp"
             android:layout_marginTop="15dp" />
     <EditText
@@ -67,6 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Address"
+        android:backgroundTint="#088A68"
         android:layout_marginTop="20dp"
         android:background="@android:color/darker_gray"
         android:textSize="40sp"
