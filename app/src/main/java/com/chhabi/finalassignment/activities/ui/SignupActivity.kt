@@ -1,10 +1,11 @@
-package com.chhabi.finalassignment
+package com.chhabi.finalassignment.activities.ui
 
 import android.content.Intent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.chhabi.finalassignment.R
 
 
 class SignupActivity : AppCompatActivity(), View.OnClickListener {
@@ -20,22 +21,23 @@ class SignupActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
-        etfname= findViewById(R.id.etfname)
-        etlname= findViewById(R.id.etlname)
-        etusername= findViewById(R.id.etusername)
-        etpassword= findViewById(R.id.etpassword)
-        etage= findViewById(R.id.etage)
-        etaddress= findViewById(R.id.etfname)
-        btnsign= findViewById(R.id.btnsign)
+        etfname = findViewById(R.id.etfname)
+        etlname = findViewById(R.id.etlname)
+        etusername = findViewById(R.id.etusername)
+        etpassword = findViewById(R.id.etPassword)
+        etage = findViewById(R.id.etage)
+        etaddress = findViewById(R.id.etfname)
+        btnsign = findViewById(R.id.btnsign)
 
         btnsign.setOnClickListener(this)
 
-        }
+
+    }
 
     override fun onClick(v: View?) {
         when (v?.id)
         {
-            R.id.btnenter->
+            R.id.btnenter ->
             {
 
                 etfname.text.clear()
