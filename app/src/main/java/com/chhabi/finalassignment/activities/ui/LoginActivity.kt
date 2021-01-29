@@ -81,7 +81,7 @@ class LoginActivity : AppCompatActivity(){
                     .checkUser(username, password)
             if (customer == null) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@LoginActivity, "Invalid credentials", Toast.LENGTH_SHORT)
+                    Toast.makeText(this@LoginActivity, "Invalid usernme and password", Toast.LENGTH_SHORT)
                             .show()
                 }
             } else {

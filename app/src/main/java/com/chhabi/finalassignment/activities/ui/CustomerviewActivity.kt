@@ -7,6 +7,6 @@ import com.chhabi.finalassignment.R
 class CustomerviewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_customerview)
+        setContentView(R.layout.activity_customerview2)
     }
 }
