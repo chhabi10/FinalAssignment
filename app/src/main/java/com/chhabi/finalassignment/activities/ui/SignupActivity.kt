@@ -1,14 +1,17 @@
 package com.chhabi.finalassignment.activities.ui
 
-import android.content.Intent
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.chhabi.finalassignment.R
+import com.chhabi.finalassignment.activities.ui.Db.CustomerDb
+import com.chhabi.finalassignment.activities.ui.Entity.Customer
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 
-class SignupActivity : AppCompatActivity(), View.OnClickListener {
+class SignupActivity : AppCompatActivity() {
     private lateinit var etfname:EditText
     private lateinit var etlname: EditText
     private lateinit var etusername: EditText
@@ -29,29 +32,27 @@ class SignupActivity : AppCompatActivity(), View.OnClickListener {
         etaddress = findViewById(R.id.etfname)
         btnsign = findViewById(R.id.btnsign)
 
-        btnsign.setOnClickListener(this)
+
+        btnsign.setOnClickListener {
+            val fname = etfname.text.toString()
+            val lname = etlname.text.toString()
+            val username = etusername.text.toString()
+            val password = etpassword.text.toString()
+            val age= etage.text.toString()
+            val address=etaddress.text.toString()
+
+
+                val customer = Customer(fname, lname, username, password,age,address)
+                CoroutineScope(Dispatchers.IO).launch {
+                    CustomerDb.getInstance(this@SignupActivity).getCustomerDao().registercustomer(customer)
+                }
+                Toast.makeText(this, "Customer register", Toast.LENGTH_SHORT).show()
+        }
 
 
     }
 
-    override fun onClick(v: View?) {
-        when (v?.id)
-        {
-            R.id.btnenter ->
-            {
 
-                etfname.text.clear()
-                etlname.text.clear()
-                etusername.text.clear()
-                etaddress.text.clear()
-                etpassword.text.clear()
-                val intent= Intent(this, LoginActivity::class.java)
-                startActivity(intent)
-                Toast.makeText(this, "Student Added Successfully!", Toast.LENGTH_SHORT).show()
-            }
-        }
-
-            }
     }
 
 

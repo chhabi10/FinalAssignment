@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.chhabi.finalassignment.activities.ui.Dao.UserDao
+import com.chhabi.finalassignment.activities.ui.Dao.CustomerDao
 import com.chhabi.finalassignment.activities.ui.Entity.Customer
 
 @Database(
@@ -13,7 +13,7 @@ import com.chhabi.finalassignment.activities.ui.Entity.Customer
         exportSchema = false
 )
 abstract class  CustomerDb : RoomDatabase() {
-    abstract fun getUserDao(): UserDao
+    abstract fun getCustomerDao(): CustomerDao
 
     companion object {
         @Volatile
