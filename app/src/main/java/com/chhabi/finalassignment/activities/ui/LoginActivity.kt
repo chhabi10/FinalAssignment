@@ -9,7 +9,13 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.chhabi.finalassignment.R
+import com.chhabi.finalassignment.activities.ui.Db.CustomerDb
+import com.chhabi.finalassignment.activities.ui.Entity.Customer
 import com.google.android.material.textfield.TextInputEditText
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 
 class LoginActivity : AppCompatActivity(){
@@ -35,6 +41,7 @@ class LoginActivity : AppCompatActivity(){
         }
 
        btnlogin.setOnClickListener {
+           login()
            validate()
 
 
@@ -60,6 +67,28 @@ class LoginActivity : AppCompatActivity(){
             }
         }
         return flag
+    }
+
+    private fun login()
+    {
+        val username = etusername.text.toString()
+        val password = etpassword.text.toString()
+
+        var customer: Customer? = null
+        CoroutineScope(Dispatchers.IO).launch {
+            customer = CustomerDb.getInstance(this@LoginActivity)
+                    .getCustomerDao()
+                    .checkUser(username, password)
+            if (customer == null) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@LoginActivity, "Invalid credentials", Toast.LENGTH_SHORT)
+                            .show()
+                }
+            } else {
+                startActivity(Intent(this@LoginActivity,
+                        DashboardActivity::class.java))
+            }
+        }
     }
 
 
