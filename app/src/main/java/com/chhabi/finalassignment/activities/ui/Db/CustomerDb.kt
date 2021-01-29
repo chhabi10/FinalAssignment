@@ -6,9 +6,10 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.chhabi.finalassignment.activities.ui.Dao.CustomerDao
 import com.chhabi.finalassignment.activities.ui.Entity.Customer
+import com.chhabi.finalassignment.activities.ui.Entity.Test
 
 @Database(
-        entities = [(Customer::class)],
+        entities = [(Customer::class),(Test::class)],
         version = 1,
         exportSchema = false
 )
