@@ -1,4 +1,4 @@
-package com.chhabi.finalassignment.activities.ui
+package com.chhabi.finalassignment.activities.ui.UI
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -8,15 +8,15 @@ import com.chhabi.finalassignment.activities.ui.Dao.CustomerDao
 import com.chhabi.finalassignment.activities.ui.Entity.Customer
 import com.chhabi.finalassignment.activities.ui.Entity.Test
 
+
 @Database(
-        entities = [(Customer::class),(Test::class)],
-        version = 1,
-        exportSchema = false
+    entities = [ (Customer::class),(Test::class)],
+    version = 1,
+    exportSchema = false
 )
 abstract class  CustomerDb : RoomDatabase() {
-    abstract fun getCustomerDao(): CustomerDao
+    abstract fun getCustomerDAO(): CustomerDao
 
-    companion object {
         @Volatile
         private var instance: CustomerDb? = null
 
@@ -30,10 +30,10 @@ abstract class  CustomerDb : RoomDatabase() {
         }
 
         private fun buildDatabase(context: Context) =
-                Room.databaseBuilder(
-                        context.applicationContext,
-                        CustomerDb::class.java,
-                        "CustomerDb"
-                ).build()
+            Room.databaseBuilder(
+                context.applicationContext,
+                CustomerDb::class.java,
+                "StudentDB"
+            ).build()
     }
-}
+

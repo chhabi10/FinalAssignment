@@ -41,18 +41,19 @@ class LoginActivity : AppCompatActivity(){
         }
 
        btnlogin.setOnClickListener {
-           login()
-           validate()
+
 
 
            if (etusername.text.toString() == "chhabi" && etpassword.text.toString() == "chhabi123") {
-               val intent = Intent(this, MainActivity::class.java)
+               val intent = Intent(this,LoginActivity::class.java)
                startActivity(intent)
            } else {
                Toast.makeText(this, " username or password is incorrect", Toast.LENGTH_SHORT).show()
                etusername.error = "Username or password is incorrect"
                etusername.requestFocus()
            }
+           login()
+           validate()
        }
 
         }
@@ -86,7 +87,7 @@ class LoginActivity : AppCompatActivity(){
                 }
             } else {
                 startActivity(Intent(this@LoginActivity,
-                        DashboardActivity::class.java))
+                        MainActivity::class.java))
             }
         }
     }

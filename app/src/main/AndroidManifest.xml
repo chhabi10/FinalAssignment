@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalAssignment">
-        <activity android:name=".activities.ui.CustomerviewActivity"></activity>
+        <activity android:name=".activities.ui.UI.CustomerviewActivity"></activity>
         <activity android:name=".activities.ui.DashboardActivity" />
         <activity android:name=".activities.ui.SplashscreenActivity">
             <intent-filter>

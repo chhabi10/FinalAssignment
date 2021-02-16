@@ -1,4 +1,6 @@
 package com.chhabi.finalassignment.activities.ui.Response
 
-class LoginResponse {
-}
+data class LoginResponse(
+        val success:Boolean?=null,
+        val token:String?=null
+)
