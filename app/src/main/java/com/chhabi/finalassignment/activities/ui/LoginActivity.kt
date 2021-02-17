@@ -9,9 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.chhabi.finalassignment.R
-import com.chhabi.finalassignment.activities.ui.Db.CustomerDb
 import com.chhabi.finalassignment.activities.ui.Entity.Customer
-import com.google.android.material.textfield.TextInputEditText
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

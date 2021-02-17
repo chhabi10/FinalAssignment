@@ -11,7 +11,8 @@ data class Customer(
         var password: String? = null,
         var age: String?=null,
         var address: String? =null
-){
-    @PrimaryKey(autoGenerate = true)
-    var userId: Int = 0
-}
+)
+//{
+   // @PrimaryKey(autoGenerate = true)
+    //var customerId: Int = 0
+//}

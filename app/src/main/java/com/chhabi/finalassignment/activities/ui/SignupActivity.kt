@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.chhabi.finalassignment.R
-import com.chhabi.finalassignment.activities.ui.Db.CustomerDb
 import com.chhabi.finalassignment.activities.ui.Entity.Customer
+import com.chhabi.finalassignment.activities.ui.Repository.UserRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.lang.Exception
 
 
 class SignupActivity : AppCompatActivity() {
@@ -19,6 +22,8 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var etage : EditText
     private lateinit var etaddress: EditText
     private lateinit var btnsign: Button
+    private lateinit var cpassword:EditText
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +36,7 @@ class SignupActivity : AppCompatActivity() {
         etage = findViewById(R.id.etage)
         etaddress = findViewById(R.id.etfname)
         btnsign = findViewById(R.id.btnsign)
+        cpassword=findViewById(R.id.cpassword)
 
 
         btnsign.setOnClickListener {
@@ -40,20 +46,53 @@ class SignupActivity : AppCompatActivity() {
             val password = etpassword.text.toString()
             val age= etage.text.toString()
             val address=etaddress.text.toString()
+            val confirmpassword=cpassword.text.toString()
 
 
-                val customer = Customer(fname, lname, username, password,age,address)
-                CoroutineScope(Dispatchers.IO).launch {
-                    CustomerDb.getInstance(this@SignupActivity).getCustomerDao().registercustomer(customer)
-                }
-                Toast.makeText(this, "Customer register", Toast.LENGTH_SHORT).show()
+            if (password != confirmpassword) {
+                cpassword.error= "Password does not match"
+                cpassword.requestFocus()
+                return@setOnClickListener
+            }
+            else{
+                val customer= Customer(fname=fname,lname = lname,username = username,password = password,age = age,address = address)
+             CoroutineScope(
+                     Dispatchers.IO).launch {
+                 try {
+                     val userRepository = UserRepository()
+                     val response = userRepository.registerUser(customer)
+                     if (response.success == true) {
+                         withContext(Main) {
+                             Toast.makeText(
+                                     this@SignupActivity,
+                                     "register successfull",
+                                     Toast.LENGTH_SHORT
+                             ).show()
+                         }
+                     }
+                 } catch (ex: Exception) {
+                     withContext(Main) {
+                         Toast.makeText(
+                                 this@SignupActivity,
+                                 "register error",
+                                 Toast.LENGTH_SHORT
+                         ).show()
+                     }
+                 }
+
+             }
+            }
         }
-
-
     }
+}
 
 
-    }
+
+
+
+
+
+
 
 
 

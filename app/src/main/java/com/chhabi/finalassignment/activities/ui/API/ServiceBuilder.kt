@@ -1,6 +1,5 @@
 package com.chhabi.finalassignment.activities.ui.API
 
-import com.chhabi.finalassignment.activities.ui.Db.CustomerDb
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
