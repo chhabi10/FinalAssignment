@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import com.chhabi.finalassignment.R
-import com.chhabi.finalassignment.activities.ui.LoginActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var imgv: ImageView

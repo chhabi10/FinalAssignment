@@ -44,7 +44,7 @@ class SignupActivity : AppCompatActivity() {
             val lname = etlname.text.toString()
             val username = etusername.text.toString()
             val password = etpassword.text.toString()
-            val age= etage.text.toString()
+            val age= etage.text.toString().toInt()
             val address=etaddress.text.toString()
             val confirmpassword=cpassword.text.toString()
 
@@ -74,7 +74,7 @@ class SignupActivity : AppCompatActivity() {
                      withContext(Main) {
                          Toast.makeText(
                                  this@SignupActivity,
-                                 "register error",
+                                 ex.toString(),
                                  Toast.LENGTH_SHORT
                          ).show()
                      }

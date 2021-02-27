@@ -10,7 +10,7 @@ data class User(
         var lname: String? = null,
         var username: String? = null,
         var password: String? = null,
-        var age: String?=null,
+        var age: Int?=null,
         var address: String? =null
 )
 //{

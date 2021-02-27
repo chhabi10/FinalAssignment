@@ -11,7 +11,7 @@ import retrofit2.http.POST
 interface UserAPI {
 
     //User registration
-    @POST("auth/register")
+    @POST("user/register")
     suspend fun registerUser(
             @Body user: User
     ): Response<LoginResponse>
@@ -20,7 +20,7 @@ interface UserAPI {
     //Login check
     @FormUrlEncoded
 
-    @POST("auth/login")
+    @POST("user/login")
     suspend fun checkUser(
             @Field("username") username:String,
             @Field("password") password:String
