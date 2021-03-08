@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="menuCamera" type="id" />
+    <item name="menuGallery" type="id" />
+</resources>
