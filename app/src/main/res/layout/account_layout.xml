@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    
+   <TextView
+    android:id="@+id/tvname"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="20dp"
+    android:text="Account name"
+    android:textColor="@color/black"
+    android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginTop="14dp"
+        android:text="Accountnumber"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imgProfile"
+        app:layout_constraintTop_toBottomOf="@+id/tvFullname"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:id="@+id/tvamount"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginTop="14dp"
+        android:text="Amount"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imgProfile"
+        app:layout_constraintTop_toBottomOf="@+id/tvLastname"
+        android:layout_marginLeft="15dp" />
+
+
+
+
+ <TextView
+        android:id="@+id/tvremarks"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:text="Remarks"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+         />
+
+    <ImageButton
+        android:id="@+id/btndelete"
+        android:layout_width="57dp"
+        android:layout_height="58dp"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+
+</LinearLayout>

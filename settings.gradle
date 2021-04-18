@@ -1,0 +1,3 @@
+include ':finalassignmentwear'
+include ':app'
+rootProject.name = "FinalAssignment"

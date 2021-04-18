@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ui.TransferActivity">
+
+
+
+    <EditText
+        android:id="@+id/etname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Acountholder Name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+
+        />
+    <EditText
+        android:id="@+id/etnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Account number"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_margin="5dp"/>
+    <EditText
+        android:id="@+id/etamount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Amount"
+        android:inputType="number"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_margin="5dp"/>
+    <EditText
+    android:id="@+id/etremarks"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Remarks"
+        android:inputType="text"
+    android:textColorHint="@color/black"
+    android:textSize="20sp"
+    android:textColor="@color/black"
+    android:layout_margin="5dp"/>
+    <Button
+        android:id="@+id/btnsend"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Send"
+        android:background="@drawable/button1"
+        android:layout_margin="20dp"/>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FinalAssignment</string>
+    <string name="title_activity_buttom_nav">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_google_map">Map</string>
+    <!-- Strings used for fragments for navigation -->
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>
